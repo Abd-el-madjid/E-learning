@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+      .home{
+       display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+         background-image:url(resourceex/home_back.png ) no-repeat;
+    background-size: cover;
+        
+            
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        text-align: center;
+        min-height: 100vh;
+    }

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root{
+  --gradient1:#5A352A;
+  --gradient2:#27213c;
+  --gradient3:#726953;
+  --gradient4:#A33B20;
+}
+
+.non2{
+    display: none;
+      }
+.home .container{
+	top: 1rem;
+	    margin-top: 5%;
+	position:relative;
+	top:5%;
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.home .container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.home .container .title::before{
+  content: "";
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  height: 3px;
+  width: 40px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #5A352A, #27213c);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  
+  margin-top: 2px;
+  margin-bottom: 16px;
+  width: 100%;
+  width: calc(100% / 2 - 20px);
+  display: block;
+  padding: 9px;
+  border: 1px solid #858585;
+  margin-bottom: 30px;
+  border-radius: 3px;
+  justify-content: space-between;
+ 
+}
+form .input-box span.details{
+    display: block;
+    float: left;
+    margin-top: -20px;
+    background: #FFFFFF;
+    height: 18px;
+    padding: 2px 5px 2px 5px;
+    color: #151515;
+    font-size: 16px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form .input-box span.note{
+  background: #F3F3F3;
+	display: block;
+	padding: 5px;
+	margin: 0 -9px -9px -9px;
+	text-align: center;
+	color: #C0C0C0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.user-details .input-box input::placeholder {
+	font-size: 15px;
+	padding: 5px;
+	margin: 0 -9px -9px -9px;
+	text-align: center;
+	color: #C0C0C0;
+  opacity: .7;
+}
+.user-details .input-box input{
+  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.user-details .input-box:hover   {
+ 
+  border: 1.5px solid #27213c;
+}
+.user-details .input-box input:valid  +.note{
+  border-top: 5px #9b59b6 ;
+ 
+}
+form .gender-details{
+    width: 100%;
+    padding: 10px;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+
+
+
+
+ form .type-details {
+    width: 100%;
+    padding: 10px;
+ }
+
+
+
+ form .type-details .type-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+.type,.gender{
+	  font-size: 15px;
+  font-weight: 500;
+}
+
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #type-1:checked ~ .category label .one,
+ #type-2:checked ~ .category label .two,
+ #type-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+
+
+
+
+
+
+
+
+
+
+
+ 
+ form input[type="radio"]{
+   display: none;
+ }
+ .gendre_type{
+    width: 100%;
+}
+ form .button{
+    width: 100%;
+   max-height: 10rem;
+   margin: 10px 0;
+   display: flex;
+   justify-content: space-around;
+   align-content: space-around;
+   align-items: center;
+   flex-wrap: nowrap;
+   flex-direction: row;
+
+ }
+ form .button input{
+   height: 100%;
+  
+   border-radius: 5px;
+   border: none;
+   
+   font-size: 18px;
+   font-weight: 500;
+  
+   
+  
+   }
+   form .button input:hover{transition: all 0.3s ease;}
+ 
+
+
+
+
+
+ @media(max-width: 584px){
+ .container{
+  max-width: 85%;
+}
+form .user-details .input-box{
+  margin-top: 7px;
+  margin-bottom: 16px;
+  width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+  form .button {
+    flex-direction: column;
+    
+   }
+    form .button input {
+      
+      width: 100%;
+      
+  }
+ 
+
+}

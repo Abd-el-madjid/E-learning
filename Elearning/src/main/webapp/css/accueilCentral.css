@@ -1,0 +1,770 @@
+:root{
+    --gradient1:#5A352A;
+    --gradient2:#27213c;
+    --gradient3:#726953;
+    --gradient4:#A33B20;
+}
+
+*{
+    font-family: Playfair Display;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    border:none; outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:#f39c12;
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:var(--gradient3);
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--gradient2);
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem 7%;
+    padding-top:6rem;
+}
+
+
+header #menu{
+    margin-right: 28%;
+    font-size: 4rem;
+    color:#fff;
+    cursor: pointer;
+    display: none;
+}
+
+header #menu:hover{
+    color:var(--gradient4);
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgb(17,17,17);
+   
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+ .sidenav li:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+  }
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    
+    font-size: 36px;
+    margin-left: 70%;
+}
+
+.btn{
+    padding:.6rem 2.8rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background:var(--gradient2);
+    border-radius: 5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:-1rem; left:-100%;
+    background:#fff9;
+    height:150%;
+    width:20%;
+    transform: rotate(25deg);
+    z-index: -1;
+}
+
+.btn:hover::before{
+    transition: .3s linear;
+    left: 120%;
+}
+
+.heading{
+    color:#444;
+    padding:1rem;
+    font-size: 5rem;
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:1rem 7%;
+    
+}
+
+ header #logo_img_2{
+    display: none;
+position: absolute;
+left: -100px;
+  }
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin:0 1rem;
+}
+
+header .navbar ul li a{
+    font-size: 1.8rem;
+    color:#fff;
+        text-shadow: 0px -1px 6px black;
+}
+
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color:var(--gradient4);
+    ;
+}
+
+header .logo{
+   
+	    display: flex;
+   
+    
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background:url(resourceex/ntic22.png) no-repeat;
+    background-size: cover;
+    
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 6rem;
+    color: rgb(84 82 82);
+    text-shadow: -1px 0px #f1f1f1;
+}
+.home .searchbar{
+    width: 60%;
+}
+.home input {
+    font-size: 1.9rem;
+    color: #fff;
+    padding: 0.6rem 0;
+    width: 90%;
+    background: rgb(126 112 78 / 42%);
+    border-radius: 1.5rem 0rem 0rem 1.5rem;
+    border: 1px solid rgba(255,255,255,.4);
+    box-shadow: 0 0.1rem 0.3rem black;
+}
+.home input:focus{
+    color: var(--gradient2);
+    background:rgba(255,255,255,.7);
+}
+.searchButton {
+    width:6%;
+    padding:0.6rem 0;
+    border: 1px solid rgba(255,255,255,.4);
+    background: var(--gradient2);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 0.8rem  0.8rem 0;
+    cursor: pointer;
+    font-size: 1.9rem;
+    position: relative;
+
+}
+
+
+.non2{
+    display: none;
+      }
+
+.list {
+    color: aliceblue;
+    width: 45%;
+    border: 1px solid white;
+    float: left;
+    left: 26.5%;
+    /* right: 50%; */
+    /* display: flex; */
+    position: absolute;
+    /* right: 91%; */
+    z-index: 1;
+}
+.list tbody{
+    border: 2px solid white;
+}
+.list tr {	margin: 1px;
+    border: 1px solid wheat;
+    max-height: 30px;
+    /* height: 30px; */
+    background: white;
+    color: black;}
+.list tr td {
+    cursor: pointer;
+    border: 1px solid;
+    max-height: 31px;
+    /* font-size: 2.3rem; */
+    text-align: left;
+    font-size: 1.9rem;
+    color: #fff;
+    padding: 0.6rem 0;
+    width: 90%;
+    background: rgb(172 163 143 / 96%);
+    border-radius: 1.5rem 0rem 0rem 1.5rem;
+    border: 1px solid rgba(255,255,255,.4);
+    box-shadow: 0 0.1rem 0.3rem black;
+}
+ .list tr td a {
+    padding-left: 15px;
+    color: black;
+    text-shadow: 1px 1px 5PX rgb(255 255 255 / 70%);
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--gradient4);
+}
+
+.about .image{
+    flex:1 1 40rem;
+}
+
+.about .image img{
+    height:65vh;
+    width:100%;
+}
+
+.about .content{
+    flex:1.5 1.5 40rem;
+    padding:1rem 1rem ;
+}
+
+.about .content h3{
+    font-size: 5rem;
+    color:#666;
+}
+
+.about .content p{
+    font-size:2rem;
+    color:#666;
+    padding:1.5rem 0;
+}
+
+.course { display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;}
+
+.course .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.course a {
+    position: relative;
+}
+.course .box-container .box{
+    width:35rem;
+    border:.1rem solid rgba(255,255,255,.3);
+    position: relative;
+    margin:1.5rem;  
+}
+
+.course .box-container .box img{
+    height:20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.course .box-container .box .content{
+    padding:1rem;
+}
+
+
+
+.course .box-container .box .content .title{
+    color:#fff;
+    font-size: 2.1rem;
+   
+}
+
+.course .box-container .box .content .title:hover{
+    text-decoration: underline white;
+}
+
+.course .box-container .box .content p{
+    padding:1rem 0;
+    color:var(--gradient2);
+    font-size: 1.5rem;
+}
+
+.course .box-container .box .content .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .5rem;
+    border-top: .1rem solid rgba(0,0,0,.3);
+}
+
+.course .box-container .box .content .info h3{
+    font-size: 1.5rem;
+    padding:1rem;
+    color:white;
+}
+
+.course .box-container .box .content .info h3 i{
+    color:var(--gradient2);
+}
+
+
+.Ressources_étudiantes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+.Ressources_étudiantes .carde-container{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.Ressources_étudiantes .carde-container .carde {
+    display: flex;
+    flex-direction: row;
+     width:100%;
+    border:.1rem solid rgba(0,0,0,.3);
+    position: relative;
+    margin:1.5rem;
+    border-radius: 1rem;
+     box-shadow: 0 .1rem .3rem rgba(0,0,0,.8);
+    
+}
+.Ressources_étudiantes .carde-container .image_carde {
+    height:10rem;
+    width:50%;
+}
+.Ressources_étudiantes .carde-container .carde img{
+   max-width: 100%
+}
+
+.Ressources_étudiantes .carde-container .content_resource{
+    flex:1.5 1.5 40rem;
+    padding:1rem 1rem ;
+}
+
+.Ressources_étudiantes .carde-container .content_resource a{
+    font-size: 3rem;
+    color:var(--gradient4);
+}
+
+.Ressources_étudiantes .carde-container .content_resource p{
+    font-size:2rem;
+    color:#666;
+    padding:1.5rem 0;
+}
+.Ressources_étudiantes .carde-container .content_resource a button {
+    float: right;
+}
+
+.news{
+    text-align: center;
+    height: 10vh;;
+}
+.news a{
+   font-size: 3rem;
+    color:var(--gradient1);
+cursor: pointer;}
+    .news a:hover{
+  
+    color:var(--gradient2);
+text-decoration:underline;}
+.news p{
+    font-size: 2.5rem;
+    color:#fff;
+    width:80rem;
+    margin:1rem auto;
+}
+.news button{
+    font-size: 2.5rem;
+ 
+}
+.footer{
+    background:var(--gradient4);
+    margin-top: 10rem;
+}
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    margin:1.5rem;
+    text-align: center;
+    flex:1 1 25rem;
+  
+  
+
+}
+.footer .box-container .box .image_footer {
+    height: 150px;
+    width: 150px;
+   
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:#fff;
+    padding:1rem 0;
+}
+
+.footer .box-container .box p{
+    font-size: 1.7rem;
+    color:#eee;
+    padding:.7rem 0;
+}
+
+.footer .box-container .box p i{
+    padding-right: .5rem;
+    color:var(--gradient2);
+}
+
+.footer .box-container .box a{
+    font-size: 1.8rem;
+    display: block;
+    padding:.5rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .credit{
+    
+    font-size: 1.5rem;
+    color:#fff;
+    background:#111;
+    text-align: center;
+    font-weight: normal;
+    
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+
+.footer .copyright p{
+    color:#f39c12
+}
+
+
+
+
+
+  .footer .copyright {
+    padding: 0 3%;
+    font-size:13px;
+    opacity:0.6;
+  }
+
+
+.footer .social {
+     
+     text-align:center;
+     padding: 0 3%;
+       display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   }
+
+
+
+   .footer .social > ion-icon {
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    justify-content: center;
+    margin:2rem;
+    color:inherit;
+    cursor: pointer;
+    
+  }
+   .footer .social a {
+   height: 45px;
+    width: 45px;
+    color: white;
+    line-height:40px;
+    display:inline-block;
+    justify-content: center;
+    margin:2rem;
+    color:inherit;
+    cursor: pointer;
+    
+  }     
+
+  .footer .item.social a> ion-icon {
+ width: 100%;
+ height: 100%;
+
+
+}
+
+  .footer .item.social a> ion-icon:hover {
+    opacity:0.8;
+    color:var(--gradient4);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+@media screen and (max-height: 500px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 12px;}
+}
+
+@media (max-width:900px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top:-120%; left:0;
+        width:100%;
+        background:#444;
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding:2rem 0;
+    }
+
+    header .navbar ul li{
+        margin:1.5rem 0;
+        text-align: center;
+        width:100%;
+    }
+
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        display: block;
+    }
+
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover{
+        color:#f39c12;
+    }
+    header   .sidenav .closebtn {
+
+        font-size: 4rem;
+        margin-left: 50%;
+    }
+
+   
+    header .navbar.nav-toggle{
+        top:6.4rem;
+    }
+
+    .home h1{
+        font-size: 4rem;
+    }
+
+    .home p{
+        width: auto;
+    }
+
+   .Ressources_étudiantes p{
+        width:auto;
+    }
+.Ressources_étudiantes .carde-container .image_carde img{
+    height:10rem;
+    width:25%;
+}
+
+    .contact .row .image{
+        display: none;
+    }
+      .footer .credit{
+        display: block;
+        justify-content: center;
+      }
+ 
+       header #menu{
+    left:  25%;
+    position: relative;
+}
+}
+
+@media (max-width:500px){
+
+       html{
+      font-size: 50%;
+    }
+
+
+
+   .Ressources_étudiantes .carde-container .carde {
+    display: flex;
+    flex-direction: column;
+width:65%;
+}
+    .Ressources_étudiantes .carde-container .image_carde img{
+    height:5rem;
+    width:20%;
+}
+.Ressources_étudiantes .carde-container .content_resource .Read_more {
+    
+float: right;
+}
+.Ressources_étudiantes .carde-container .content_resource {
+   flex:1.5 1.5 25rem;
+}
+footer{
+    width: 100%;
+}
+.sign_in_button {
+ width: 100%;
+      
+    }
+
+}
+@media (max-width:600px){
+
+       html{
+      font-size: 50%;
+    }
+
+
+footer{
+    width: 100%;
+}
+.footer .credit{
+ 
+  justify-content: center;
+  
+ 
+}
+
+
+.footer .box-container .box {
+    display: flex;
+    margin: 1.5rem;
+    text-align: center;
+    flex: 1 1 25rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+@media (max-width:350px){
+  
+    html{
+   font-size: 50%;
+ }
+
+footer{
+ width: 100%;
+}
+
+
+}
+

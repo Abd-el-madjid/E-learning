@@ -1,0 +1,87 @@
+.btn{
+    padding:.6rem 2.8rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background:var(--gradient2);
+    border-radius: 5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:-1rem; left:-100%;
+    background:#fff9;
+    height:150%;
+    width:20%;
+    transform: rotate(25deg);
+    z-index: -1;
+}
+
+.btn:hover::before{
+    transition: .3s linear;
+    left: 120%;
+}
+
+.inline-btn,
+      .inline-option-btn,
+      .inline-delete-btn,
+      .btn_profile,
+      .delete-btn,
+      .option-btn{
+        border-radius: .5rem;
+        color:#fff;
+        font-size: 1.8rem;
+        cursor: pointer;
+        text-transform: capitalize;
+        padding:1rem 3rem;
+        text-align: center;
+        margin-top: 1rem;
+      }
+    
+      .btn_profile,
+      .option-btn{
+        display: block;
+        width: 100%;
+      }
+    
+      .inline-btn,
+      .inline-option-btn,
+      .inline-delete-btn{
+        display: inline-block;
+      }
+    
+      .btn_profile,
+      .inline-btn{
+        background-color: var(--gradient3);
+      }
+    
+      .option-btn,
+      .inline-option-btn{
+        background-color:var(--gradient2);
+      }
+    
+      .delete-btn,
+      .inline-delete-btn{
+        background-color: var(--red);
+      }
+    
+      .inline-btn:hover,
+      .inline-option-btn:hover,
+      .inline-delete-btn:hover,
+      .btn_profile:hover,
+      .delete-btn:hover,
+      .option-btn:hover{
+        background-color: var(--gradient4);
+        color: white;
+      }
+    
+      .flex-btn{
+        display: flex;
+        gap: 1rem;
+      }

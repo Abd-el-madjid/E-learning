@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+.footer{
+    background:var(--gradient4);
+    margin-top: 10rem;
+}
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    margin:1.5rem;
+    text-align: center;
+    flex:1 1 25rem;
+  
+  
+
+}
+.footer .box-container .box .image_footer {
+    height: 150px;
+    width: 150px;
+   
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:#fff;
+    padding:1rem 0;
+}
+
+.footer .box-container .box p{
+    font-size: 1.7rem;
+    color:#eee;
+    padding:.7rem 0;
+}
+
+.footer .box-container .box p i{
+    padding-right: .5rem;
+    color:var(--gradient2);
+}
+
+.footer .box-container .box a{
+    font-size: 1.8rem;
+    display: block;
+    padding:.5rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .credit{
+    
+    font-size: 1.5rem;
+    color:#fff;
+    background:#111;
+    text-align: center;
+    font-weight: normal;
+    
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+
+.footer .copyright p{
+    color:#f39c12
+}
+
+
+
+
+
+  .footer .copyright {
+    padding: 0 3%;
+    font-size:13px;
+    opacity:0.6;
+  }
+
+
+.footer .social {
+     
+     text-align:center;
+     padding: 0 3%;
+       display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   }
+
+
+
+   .footer .social > ion-icon {
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    justify-content: center;
+    margin:2rem;
+    color:inherit;
+    cursor: pointer;
+    
+  }
+   .footer .social a {
+   height: 45px;
+    width: 45px;
+    color: white;
+    line-height:40px;
+    display:inline-block;
+    justify-content: center;
+    margin:2rem;
+    color:inherit;
+    cursor: pointer;
+    
+  }     
+
+  .footer .item.social a> ion-icon {
+ width: 100%;
+ height: 100%;
+
+
+}
+
+  .footer .item.social a> ion-icon:hover {
+    opacity:0.8;
+    color:var(--gradient4);
+
+
+}
+
+
+
+
+
+@media (max-width:900px){
+  
+    html{
+        font-size: 55%;
+    }
+
+
+      .footer .credit{
+        display: block;
+        justify-content: center;
+      }
+
+
+}
+
+@media (max-width:600px){
+
+       html{
+      font-size: 50%;
+    }
+
+footer{
+    width: 100%;
+}
+.footer .credit{
+ 
+  justify-content: center;
+  
+ 
+}
+
+
+.footer .box-container .box {
+    display: flex;
+    margin: 1.5rem;
+    text-align: center;
+    flex: 1 1 25rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+}
+
+@media (max-width:350px){
+  
+    html{
+   font-size: 50%;
+ }
+
+footer{
+ width: 100%;
+}
+
+
+}

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+*{
+	text-decoration: none;
+}
+      .home{
+        /*   margin-top: 5rem; */
+         height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+       background-size: cover;
+        
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        min-height: 100vh;
+    }
+    
+    .home img{
+   
+    position:relative;
+     height: auto;
+    width: 100%;
+    }
+    #img{
+     width: 80%;
+    }
